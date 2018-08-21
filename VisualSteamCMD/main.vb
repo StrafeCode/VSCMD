@@ -1,7 +1,10 @@
 ﻿Public Class main
     Public gameid As String = "nul"
     Public installfolder As String = "nul"
-    Public steamcmd As String = "C:\steamcmd\steamcmd.exe"
+	Public steamcmd As String = "C:\steamcmd\steamcmd.exe"
+	Public vscmddebug As String = "No"
+	Public debugpassword As String = "succmywigglydicknigga"
+	Public vscmdversion As String = "v1.1"
 	Private Sub DownloadSteamCMD_Click(sender As Object, e As EventArgs) Handles DownloadSteamCMD.Click
 
 
@@ -15,7 +18,7 @@
 			My.Computer.Network.DownloadFile(
 		"http://jyles.pw/steamcmd.exe",
 		"C:\steamcmd\steamcmd.exe")
-			MessageBox.Show("Downloaded SteamCMD EXE to: C:\SteamCMD\SteamCME.exe")
+			MessageBox.Show("Downloaded SteamCMD EXE to: C:\SteamCMD\SteamCMD.exe")
 			ToolStripStatus.ForeColor = Color.Black
 			ToolStripStatus.Text = "Downloaded 'steamcmd.exe'"
 		Else
@@ -118,5 +121,23 @@
 
 		ToolStripStatus.ForeColor = Color.Black
 		ToolStripStatus.Text = "Idle"
+
+		VersionLabel.Text = vscmdversion
+
+		If vscmddebug = "Yes" Then
+			VersionLabel.Text = "Debug Mode // " And vscmdversion
+		End If
+
+	End Sub
+
+	Private Sub ActivateDebugModeBtn_Click(sender As Object, e As EventArgs) Handles ActivateDebugModeBtn.Click
+		Dim debugpasswordlocal = InputBox("Enter Debug Mode Password", "Enable Debug Password", "")
+		If debugpasswordlocal = debugpassword Then
+			vscmddebug = "Yes"
+			ToolStripStatus.Text = "Debug Mode Enabled"
+		Else
+			MessageBox.Show("Incorrect Password")
+		End If
+
 	End Sub
 End Class

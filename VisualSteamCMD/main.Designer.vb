@@ -47,16 +47,22 @@ Partial Class main
 		Me.FirstRun = New System.Windows.Forms.Button()
 		Me.FolderLocationDialog = New System.Windows.Forms.FolderBrowserDialog()
 		Me.InstallLocationDisplay = New System.Windows.Forms.TextBox()
-		Me.Label13 = New System.Windows.Forms.Label()
+		Me.VersionLabel = New System.Windows.Forms.Label()
 		Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
 		Me.ToolStripStatusLabel1 = New System.Windows.Forms.ToolStripStatusLabel()
 		Me.ToolStripStatus = New System.Windows.Forms.ToolStripStatusLabel()
+		Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
+		Me.OptionsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+		Me.EnableDebugModeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+		Me.ActivateDebugModeBtn = New System.Windows.Forms.ToolStripMenuItem()
+		Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
 		Me.StatusStrip1.SuspendLayout()
+		Me.MenuStrip1.SuspendLayout()
 		Me.SuspendLayout()
 		'
 		'InstallLocation
 		'
-		Me.InstallLocation.Location = New System.Drawing.Point(232, 155)
+		Me.InstallLocation.Location = New System.Drawing.Point(232, 176)
 		Me.InstallLocation.Name = "InstallLocation"
 		Me.InstallLocation.Size = New System.Drawing.Size(139, 23)
 		Me.InstallLocation.TabIndex = 2
@@ -65,7 +71,7 @@ Partial Class main
 		'
 		'DownloadSteamCMD
 		'
-		Me.DownloadSteamCMD.Location = New System.Drawing.Point(232, 75)
+		Me.DownloadSteamCMD.Location = New System.Drawing.Point(232, 101)
 		Me.DownloadSteamCMD.Name = "DownloadSteamCMD"
 		Me.DownloadSteamCMD.Size = New System.Drawing.Size(139, 23)
 		Me.DownloadSteamCMD.TabIndex = 4
@@ -76,7 +82,7 @@ Partial Class main
 		'
 		Me.Label1.AutoSize = True
 		Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-		Me.Label1.Location = New System.Drawing.Point(13, 78)
+		Me.Label1.Location = New System.Drawing.Point(12, 87)
 		Me.Label1.Name = "Label1"
 		Me.Label1.Size = New System.Drawing.Size(60, 20)
 		Me.Label1.TabIndex = 5
@@ -86,7 +92,7 @@ Partial Class main
 		'
 		Me.Label2.AutoSize = True
 		Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-		Me.Label2.Location = New System.Drawing.Point(12, 146)
+		Me.Label2.Location = New System.Drawing.Point(12, 176)
 		Me.Label2.Name = "Label2"
 		Me.Label2.Size = New System.Drawing.Size(60, 20)
 		Me.Label2.TabIndex = 6
@@ -95,7 +101,7 @@ Partial Class main
 		'Label3
 		'
 		Me.Label3.AutoSize = True
-		Me.Label3.Location = New System.Drawing.Point(14, 177)
+		Me.Label3.Location = New System.Drawing.Point(12, 205)
 		Me.Label3.Name = "Label3"
 		Me.Label3.Size = New System.Drawing.Size(131, 13)
 		Me.Label3.TabIndex = 7
@@ -103,7 +109,7 @@ Partial Class main
 		'
 		'SetGameID
 		'
-		Me.SetGameID.Location = New System.Drawing.Point(232, 230)
+		Me.SetGameID.Location = New System.Drawing.Point(232, 244)
 		Me.SetGameID.Name = "SetGameID"
 		Me.SetGameID.Size = New System.Drawing.Size(139, 23)
 		Me.SetGameID.TabIndex = 8
@@ -114,7 +120,7 @@ Partial Class main
 		'
 		Me.Label4.AutoSize = True
 		Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
-		Me.Label4.Location = New System.Drawing.Point(13, 220)
+		Me.Label4.Location = New System.Drawing.Point(12, 244)
 		Me.Label4.Name = "Label4"
 		Me.Label4.Size = New System.Drawing.Size(60, 20)
 		Me.Label4.TabIndex = 9
@@ -123,7 +129,7 @@ Partial Class main
 		'Label5
 		'
 		Me.Label5.AutoSize = True
-		Me.Label5.Location = New System.Drawing.Point(14, 240)
+		Me.Label5.Location = New System.Drawing.Point(13, 270)
 		Me.Label5.Name = "Label5"
 		Me.Label5.Size = New System.Drawing.Size(65, 13)
 		Me.Label5.TabIndex = 10
@@ -132,7 +138,7 @@ Partial Class main
 		'LinkLabel1
 		'
 		Me.LinkLabel1.AutoSize = True
-		Me.LinkLabel1.Location = New System.Drawing.Point(237, 256)
+		Me.LinkLabel1.Location = New System.Drawing.Point(237, 270)
 		Me.LinkLabel1.Name = "LinkLabel1"
 		Me.LinkLabel1.Size = New System.Drawing.Size(123, 13)
 		Me.LinkLabel1.TabIndex = 12
@@ -142,7 +148,7 @@ Partial Class main
 		'Label7
 		'
 		Me.Label7.AutoSize = True
-		Me.Label7.Location = New System.Drawing.Point(-7, 203)
+		Me.Label7.Location = New System.Drawing.Point(-18, 221)
 		Me.Label7.Name = "Label7"
 		Me.Label7.Size = New System.Drawing.Size(547, 13)
 		Me.Label7.TabIndex = 13
@@ -152,7 +158,7 @@ Partial Class main
 		'Label8
 		'
 		Me.Label8.AutoSize = True
-		Me.Label8.Location = New System.Drawing.Point(-32, 269)
+		Me.Label8.Location = New System.Drawing.Point(-34, 283)
 		Me.Label8.Name = "Label8"
 		Me.Label8.Size = New System.Drawing.Size(547, 13)
 		Me.Label8.TabIndex = 14
@@ -162,7 +168,7 @@ Partial Class main
 		'Label9
 		'
 		Me.Label9.AutoSize = True
-		Me.Label9.Location = New System.Drawing.Point(-55, 130)
+		Me.Label9.Location = New System.Drawing.Point(-55, 148)
 		Me.Label9.Name = "Label9"
 		Me.Label9.Size = New System.Drawing.Size(547, 13)
 		Me.Label9.TabIndex = 15
@@ -172,7 +178,7 @@ Partial Class main
 		'Label10
 		'
 		Me.Label10.AutoSize = True
-		Me.Label10.Location = New System.Drawing.Point(-55, 59)
+		Me.Label10.Location = New System.Drawing.Point(-55, 74)
 		Me.Label10.Name = "Label10"
 		Me.Label10.Size = New System.Drawing.Size(547, 13)
 		Me.Label10.TabIndex = 16
@@ -183,7 +189,7 @@ Partial Class main
 		'
 		Me.Label11.AutoSize = True
 		Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-		Me.Label11.Location = New System.Drawing.Point(49, 9)
+		Me.Label11.Location = New System.Drawing.Point(46, 24)
 		Me.Label11.Name = "Label11"
 		Me.Label11.Size = New System.Drawing.Size(278, 37)
 		Me.Label11.TabIndex = 17
@@ -192,7 +198,7 @@ Partial Class main
 		'Label12
 		'
 		Me.Label12.AutoSize = True
-		Me.Label12.Location = New System.Drawing.Point(237, 46)
+		Me.Label12.Location = New System.Drawing.Point(249, 61)
 		Me.Label12.Name = "Label12"
 		Me.Label12.Size = New System.Drawing.Size(137, 13)
 		Me.Label12.TabIndex = 18
@@ -201,7 +207,7 @@ Partial Class main
 		'Label14
 		'
 		Me.Label14.AutoSize = True
-		Me.Label14.Location = New System.Drawing.Point(9, 98)
+		Me.Label14.Location = New System.Drawing.Point(9, 122)
 		Me.Label14.Name = "Label14"
 		Me.Label14.Size = New System.Drawing.Size(112, 13)
 		Me.Label14.TabIndex = 21
@@ -211,7 +217,7 @@ Partial Class main
 		'
 		Me.Label15.AutoSize = True
 		Me.Label15.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-		Me.Label15.Location = New System.Drawing.Point(12, 306)
+		Me.Label15.Location = New System.Drawing.Point(12, 320)
 		Me.Label15.Name = "Label15"
 		Me.Label15.Size = New System.Drawing.Size(221, 20)
 		Me.Label15.TabIndex = 22
@@ -221,7 +227,7 @@ Partial Class main
 		'
 		Me.Label16.AutoSize = True
 		Me.Label16.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-		Me.Label16.Location = New System.Drawing.Point(12, 282)
+		Me.Label16.Location = New System.Drawing.Point(12, 296)
 		Me.Label16.Name = "Label16"
 		Me.Label16.Size = New System.Drawing.Size(63, 24)
 		Me.Label16.TabIndex = 23
@@ -230,7 +236,7 @@ Partial Class main
 		'Install
 		'
 		Me.Install.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-		Me.Install.Location = New System.Drawing.Point(12, 325)
+		Me.Install.Location = New System.Drawing.Point(12, 343)
 		Me.Install.Name = "Install"
 		Me.Install.Size = New System.Drawing.Size(362, 44)
 		Me.Install.TabIndex = 24
@@ -240,7 +246,7 @@ Partial Class main
 		'Label17
 		'
 		Me.Label17.AutoSize = True
-		Me.Label17.Location = New System.Drawing.Point(9, 114)
+		Me.Label17.Location = New System.Drawing.Point(9, 135)
 		Me.Label17.Name = "Label17"
 		Me.Label17.Size = New System.Drawing.Size(191, 13)
 		Me.Label17.TabIndex = 25
@@ -253,7 +259,7 @@ Partial Class main
 		'FirstRun
 		'
 		Me.FirstRun.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-		Me.FirstRun.Location = New System.Drawing.Point(232, 104)
+		Me.FirstRun.Location = New System.Drawing.Point(232, 130)
 		Me.FirstRun.Name = "FirstRun"
 		Me.FirstRun.Size = New System.Drawing.Size(139, 23)
 		Me.FirstRun.TabIndex = 26
@@ -264,24 +270,24 @@ Partial Class main
 		'
 		Me.InstallLocationDisplay.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
 		Me.InstallLocationDisplay.Cursor = System.Windows.Forms.Cursors.No
-		Me.InstallLocationDisplay.Location = New System.Drawing.Point(232, 184)
+		Me.InstallLocationDisplay.Location = New System.Drawing.Point(232, 205)
 		Me.InstallLocationDisplay.Name = "InstallLocationDisplay"
 		Me.InstallLocationDisplay.Size = New System.Drawing.Size(139, 20)
 		Me.InstallLocationDisplay.TabIndex = 27
 		'
-		'Label13
+		'VersionLabel
 		'
-		Me.Label13.AutoSize = True
-		Me.Label13.Location = New System.Drawing.Point(9, 46)
-		Me.Label13.Name = "Label13"
-		Me.Label13.Size = New System.Drawing.Size(28, 13)
-		Me.Label13.TabIndex = 28
-		Me.Label13.Text = "v0.8"
+		Me.VersionLabel.AutoSize = True
+		Me.VersionLabel.Location = New System.Drawing.Point(9, 61)
+		Me.VersionLabel.Name = "VersionLabel"
+		Me.VersionLabel.Size = New System.Drawing.Size(41, 13)
+		Me.VersionLabel.TabIndex = 28
+		Me.VersionLabel.Text = "verison"
 		'
 		'StatusStrip1
 		'
 		Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripStatusLabel1, Me.ToolStripStatus})
-		Me.StatusStrip1.Location = New System.Drawing.Point(0, 372)
+		Me.StatusStrip1.Location = New System.Drawing.Point(0, 390)
 		Me.StatusStrip1.Name = "StatusStrip1"
 		Me.StatusStrip1.Size = New System.Drawing.Size(386, 22)
 		Me.StatusStrip1.TabIndex = 29
@@ -302,13 +308,50 @@ Partial Class main
 		Me.ToolStripStatus.Size = New System.Drawing.Size(24, 17)
 		Me.ToolStripStatus.Text = "nul"
 		'
+		'MenuStrip1
+		'
+		Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.OptionsToolStripMenuItem, Me.ToolStripMenuItem1})
+		Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
+		Me.MenuStrip1.Name = "MenuStrip1"
+		Me.MenuStrip1.Size = New System.Drawing.Size(386, 24)
+		Me.MenuStrip1.TabIndex = 30
+		Me.MenuStrip1.Text = "MenuStrip1"
+		'
+		'OptionsToolStripMenuItem
+		'
+		Me.OptionsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EnableDebugModeToolStripMenuItem})
+		Me.OptionsToolStripMenuItem.Name = "OptionsToolStripMenuItem"
+		Me.OptionsToolStripMenuItem.Size = New System.Drawing.Size(61, 20)
+		Me.OptionsToolStripMenuItem.Text = "Options"
+		'
+		'EnableDebugModeToolStripMenuItem
+		'
+		Me.EnableDebugModeToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ActivateDebugModeBtn})
+		Me.EnableDebugModeToolStripMenuItem.Name = "EnableDebugModeToolStripMenuItem"
+		Me.EnableDebugModeToolStripMenuItem.Size = New System.Drawing.Size(181, 22)
+		Me.EnableDebugModeToolStripMenuItem.Text = "Enable Debug Mode"
+		'
+		'ActivateDebugModeBtn
+		'
+		Me.ActivateDebugModeBtn.ForeColor = System.Drawing.SystemColors.HotTrack
+		Me.ActivateDebugModeBtn.Name = "ActivateDebugModeBtn"
+		Me.ActivateDebugModeBtn.Size = New System.Drawing.Size(189, 22)
+		Me.ActivateDebugModeBtn.Text = "Activate Debug Mode"
+		'
+		'ToolStripMenuItem1
+		'
+		Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
+		Me.ToolStripMenuItem1.Size = New System.Drawing.Size(25, 20)
+		Me.ToolStripMenuItem1.Text = "  "
+		'
 		'main
 		'
 		Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
 		Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-		Me.ClientSize = New System.Drawing.Size(386, 394)
+		Me.ClientSize = New System.Drawing.Size(386, 412)
 		Me.Controls.Add(Me.StatusStrip1)
-		Me.Controls.Add(Me.Label13)
+		Me.Controls.Add(Me.MenuStrip1)
+		Me.Controls.Add(Me.VersionLabel)
 		Me.Controls.Add(Me.InstallLocationDisplay)
 		Me.Controls.Add(Me.FirstRun)
 		Me.Controls.Add(Me.Label17)
@@ -336,6 +379,8 @@ Partial Class main
 		Me.Text = "VisualSteamCMD"
 		Me.StatusStrip1.ResumeLayout(False)
 		Me.StatusStrip1.PerformLayout()
+		Me.MenuStrip1.ResumeLayout(False)
+		Me.MenuStrip1.PerformLayout()
 		Me.ResumeLayout(False)
 		Me.PerformLayout()
 
@@ -364,8 +409,13 @@ Partial Class main
     Friend WithEvents FirstRun As Button
     Friend WithEvents FolderLocationDialog As FolderBrowserDialog
 	Friend WithEvents InstallLocationDisplay As TextBox
-	Friend WithEvents Label13 As Label
+	Friend WithEvents VersionLabel As Label
 	Friend WithEvents StatusStrip1 As StatusStrip
 	Friend WithEvents ToolStripStatusLabel1 As ToolStripStatusLabel
 	Friend WithEvents ToolStripStatus As ToolStripStatusLabel
+	Friend WithEvents MenuStrip1 As MenuStrip
+	Friend WithEvents OptionsToolStripMenuItem As ToolStripMenuItem
+	Friend WithEvents EnableDebugModeToolStripMenuItem As ToolStripMenuItem
+	Friend WithEvents ActivateDebugModeBtn As ToolStripMenuItem
+	Friend WithEvents ToolStripMenuItem1 As ToolStripMenuItem
 End Class
